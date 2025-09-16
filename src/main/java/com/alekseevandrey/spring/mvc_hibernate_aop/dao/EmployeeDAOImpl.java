@@ -13,12 +13,12 @@ import java.util.List;
 
 @Repository
 public class EmployeeDAOImpl implements EmployeeDAO {
+
     @Autowired
     private SessionFactory sessionFactory;
 
 
     @Override
-    @Transactional
     public List<Employee> getAllEmployees() {
         Session session = sessionFactory.getCurrentSession();
 //        List<Employee> allEmployees = session.createQuery("from Employee",Employee.class)
@@ -30,5 +30,11 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 
         return allEmployees;
 
+    }
+
+    @Override
+    public void saveEmployee(Employee employee) {
+        Session session = sessionFactory.getCurrentSession();
+        session.save(employee);
     }
 }
