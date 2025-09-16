@@ -1,9 +1,9 @@
-package mvc_hibernate_aop.controller;
+package com.alekseevandrey.spring.mvc_hibernate_aop.controller;
 
 
 
-import mvc_hibernate_aop.dao.EmployeeDAO;
-import mvc_hibernate_aop.entity.Employee;
+import com.alekseevandrey.spring.mvc_hibernate_aop.dao.EmployeeDAO;
+import com.alekseevandrey.spring.mvc_hibernate_aop.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,7 +21,7 @@ public class MyController {
     public String showAllEmployees(Model model){
 
         List<Employee> AllEmployees = employeeDAO.getAllEmployees();
-        model.addAttribute("AllEmp", AllEmployees);
+        model.addAttribute("allEmp", AllEmployees);
 
         return "all-employees";
     }

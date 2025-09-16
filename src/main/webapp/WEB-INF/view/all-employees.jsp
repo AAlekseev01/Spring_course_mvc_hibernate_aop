@@ -14,13 +14,14 @@
         <th>Department</th>
         <th>Salary</th>
     </tr>
-    <c:forEach var="emp" items="${allEmps}">
+
+    <c:forEach var="emp" items="${allEmp}">
 
         <tr>
             <td>${emp.name}</td>
             <td>${emp.surname}</td>
             <td>${emp.department}</td>
-            <td>${emp.salar}</td>
+            <td>${emp.salary}</td>
         </tr>
 
     </c:forEach>

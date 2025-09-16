@@ -1,10 +1,10 @@
-package mvc_hibernate_aop.entity;
+package com.alekseevandrey.spring.mvc_hibernate_aop.entity;
 
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "employee")
+@Table(name = "employees")
 public class Employee {
 
     @Id
